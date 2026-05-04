@@ -31,7 +31,7 @@ jobs:
         #ci stands for clean-install
 
   Style:
-    name: Styles
+    name: Style
     runs-on: ubuntu-latest
 
     steps:
