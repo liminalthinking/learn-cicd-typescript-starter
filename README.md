@@ -1,3 +1,5 @@
+[![CI Status](liminalthinking/learn-cicd-typescript-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/liminalthinking/learn-cicd-typescript-starter/actions)
+
 # learn-cicd-typescript-starter (Notely)
 
 This repo contains the typescript starter code for the "Notely" application for the "Learn CICD" course on [Boot.dev](https://boot.dev).
