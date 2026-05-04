@@ -28,7 +28,7 @@ jobs:
         run: npm run test -- --coverage
         #ci stands for clean-install
 
-  Style:
+  style:
     name: Style
     runs-on: ubuntu-latest
 
@@ -47,3 +47,5 @@ jobs:
       - name: prettier format check
         run: npm run format:check
 
+      - name: run lint
+        run: npm run lint
