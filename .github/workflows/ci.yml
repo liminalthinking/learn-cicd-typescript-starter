@@ -20,10 +20,10 @@ jobs:
 
       # - name: Checking out node
       #   run: node --version
-  
+
       - name: Install dependencies
         run: npm ci
 
       - name: Run tests
-        run: npm run test
+        run: npm run test -- --coverage
         #ci stands for clean-install
