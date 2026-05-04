@@ -1,4 +1,4 @@
-[![CI Status](liminalthinking/learn-cicd-typescript-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/liminalthinking/learn-cicd-typescript-starter/actions)
+[![CI Status](https://github.com/liminalthinking/learn-cicd-typescript-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/liminalthinking/learn-cicd-typescript-starter/actions)
 
 # learn-cicd-typescript-starter (Notely)
 
@@ -9,7 +9,6 @@ This repo contains the typescript starter code for the "Notely" application for 
 Make sure you're on Node version 18+.
 
 Create a `.env` file in the root of the project with the following contents:
-
 ```bash
 PORT="8080"
 ```
