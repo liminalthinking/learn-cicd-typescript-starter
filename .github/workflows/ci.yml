@@ -27,3 +27,23 @@ jobs:
       - name: Run tests
         run: npm run test -- --coverage
         #ci stands for clean-install
+
+  Style:
+    name: Styles
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: check out code
+        uses: actions/checkout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: prettier format check
+        run: npm run format:check
+
