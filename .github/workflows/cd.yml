@@ -21,3 +21,24 @@ jobs:
 
       - name: build app
         run: npm run build
+
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+      # - id: 'auth'
+      #   uses: 'google-github-actions/auth@v2'
+      #   with:
+      #     workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+      #     service_account: 'cloud-run-deployer@notely-495407.iam.gserviceaccount.com'
+
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v3'
+        with:
+          version: '>= 363.0.0'
+
+      - name: 'Use gcloud CLI'
+        run: 'gcloud info'
+
+      - name: build docker image and submit to google artifact registry
+        run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-495407/notely-ar-repo/notely:latest .
